@@ -100,12 +100,12 @@ button:focus {
 
 
 body.dark {
-    background-color: #333;
+    background-color: #1e1e1e;
     color: white;
 }
 
 .cv-container.dark {
-    background-color: #444;
+    background-color: #333;
 }
 
 .cv-header.dark h1,
@@ -123,6 +123,10 @@ footer.dark {
     color: white;
 }
 
+button.dark {
+    background-color: #555;
+    color : white;
+}
 
 .cv-section {
     transition: transform 0.3s ease;
