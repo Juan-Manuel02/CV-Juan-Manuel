@@ -1,137 +1,60 @@
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Fuente y cursor de macOS */ 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    cursor: url ('https://cdn.custom-cursor.com/db/cursor/32/mac-pointer.cur'), auto;
+    background-color: #f5f5f7;
     color: #333;
-    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
+    margin: 0;
 }
-
-.cv-container {
-    background-color: white;
-    border-radius: 20px;
-    width: 80%;
-    max-width: 1000px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-}
-
-.cv-header {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.cv-header h1 {
-    font-size: 36px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.cv-header p {
-    font-size: 18px;
-    color: #666;
-}
-
-.cv-section {
-    margin-bottom: 30px;
-}
-
-.cv-section h2 {
-    font-size: 24px;
-    color: #007aff; 
-    margin-bottom: 10px;
-}
-
-.cv-section p, .cv-section ul {
-    font-size: 16px;
-    color: #555;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    padding: 5px 0;
-}
-
-.job {
-    margin-bottom: 20px;
-}
-
-footer {
-    text-align: center;
-    font-size: 14px;
-    color: #999;
-    margin-top: 30px;
-}
-
-button {
-    display: block;
-    width: 200px;
-    padding: 12px;
-    background-color: #007aff;
-    color: white;
-    font-size: 16px;
-    border: none;
+/* Esto hace que imita una ventana de macOS */
+.mac-window {
+    background-color: #fff;
+    width: 400px;
+    background: white;
     border-radius: 10px;
-    cursor: pointer;
-    margin: 20px auto;
-    transition: background-color 0.3s ease;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 }
-
-button:hover {
-    background-color: #0051a8;
+/* Botones para la ventana de macOS */
+.mac-buttons{
+    display: flex;
+    gap: 8px;
+    padding: 10px;
+    background: #e0e0e0;
 }
-
-button:focus {
-    outline: none;
+.mac-buttons span{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
 }
-
-
-body.dark {
-    background-color: #1e1e1e;
-    color: white;
-}
-
-.cv-container.dark {
-    background-color: #333;
-}
-
-.cv-header.dark h1,
-.cv-header.dark p {
-    color: #fff;
-}
-
-.cv-section.dark {
-    background-color: #555;
-    border-radius: 15px;
+.close {background: #ff5f57;}
+.minimize {background: #ffbd2e;}
+.zoom {background: #28c940;}
+/* Esto es el contenido del CV (seguramente haga mas cambios en el código) */
+.cv-contenido{
     padding: 20px;
+    text-align: center;
 }
-
-footer.dark {
+h1 strong{
+    color: #333;
+}
+/* Estilo mejorado para el modo oscuro */
+body.dark {
+    background-color: #121212;
     color: white;
 }
-
-button.dark {
-    background-color: #555;
-    color : white;
+body.dark a body.dark h2 {
+    color: #61dafb; /* azul claro para darle más visibilidad (segunda prueba para ver si me gusta el modo oscuro con este color en la tipografía) */
 }
-
-.cv-section {
-    transition: transform 0.3s ease;
-}
-
-.cv-section:hover {
-    transform: scale(1.02);
+/* switch con el estilo IOS */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
 }

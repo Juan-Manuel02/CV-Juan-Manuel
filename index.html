@@ -5,37 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Juan Manuel</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Open Graph ¡MUY IMPORTANTE! -->
+     <meta property="og:title" content="CV Juan Manuel">
+    <meta property="og:description" content="Explora mi CV y conoce mi experiencia profesional y mis Habilidades.">
+    <meta property="og:url" content="https://juan-manuel02.github.io/CV-Juan-Manuel/">
+    <meta property="og:image" content="https://juan-manuel02.github.io/CV-Juan-Manuel/images/logotipo.png">
+    <meta property="og:type" content="website">
     <meta property="og:title" content="https://juan-manuel02.github.io/CV-Juan-Manuel/">
     <link rel="icon" type="images/png" href="/images/logotipo.png">
 
 </head>
 <body>
-    <div class="cv-container">
-        <header class="cv-header">
+    <!-- Contenido de la ventana (interfaz macOS + botones IOS) -->
+    <div class="mac-window">
+        <div class="mac-window-buttons">
+            <span class="cerrar"></span>
+            <span class="minimizar"></span>
+            <span class="maximizar"></span>            
+    </div>
+
+    <div class="cv-contenido">
+        <header class="cv-cabezera">
             <h1><strong>Juan Manuel</strong></h1>
             <p>Desarrollador Web</p>
         </header>
 
-        <section id="about" class="cv-section">
+        <section id="sobreMi" class="cv-seccion">
             <h2>Acerca de mí</h2>
             <p>Texto de ejemplo.</p>
         </section>
 
-        <section id="experience" class="cv-section">
+        <section id="experiencia" class="cv-seccion">
             <h2>Experiencia</h2>
-            <div class="job">
+            <div class="trabajos">
                 <p><strong>Desarrollador Front-End</strong></p>
                 <p><strong>Diseñador Gráfico</strong></p>
                 <p><strong>Redes Sociales</strong></p>
             </div>
         </section>
 
-        <section id="education" class="cv-section">
+        <section id="educacion" class="cv-seccion">
             <h2>Educación</h2>
             <p>Texto de ejemplo<strong></p>
         </section>
 
-        <section id="skills" class="cv-section">
+        <section id="Habilidades" class="cv-seccion">
             <h2>Habilidades</h2>
             <ul>
                 <li>HTML</li>
@@ -53,14 +67,18 @@
 
         <footer>
             <p>&copy; 2025 Juan Manuel.</p>
+            <div class="toggle-container">                      <!-- Contenedor del botón de tema -->
+                <span class="toggle-label">Modo oscuro</span>   
+                <label class="switch">                          <!-- Interruptor para cambiar el modo -->
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider"></span>                <!-- Diseño visual -->
+                </label>
+            </div>
         </footer>
-
-        <button id="theme-toggle">Cambiar de tema</button>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
+        
+        <script src="script.js"></script>
+        </body>
+        </html>
 
 
 
