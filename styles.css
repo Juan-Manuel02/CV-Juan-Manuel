@@ -1,7 +1,7 @@
 /* Fuente y cursor de macOS */ 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    cursor: url ('https://cdn.custom-cursor.com/db/cursor/32/mac-pointer.cur'), auto;
+    cursor: url('https://cdn.custom-cursor.com/db/cursor/32/mac-pointer.cur'), auto;
     background-color: #f5f5f7;
     color: #333;
     display: flex;
@@ -14,42 +14,74 @@ body {
 .mac-window {
     background-color: #fff;
     width: 400px;
-    background: white;
     border-radius: 10px;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
     overflow: hidden;
 }
 /* Botones para la ventana de macOS */
-.mac-buttons{
+.mac-window-buttons {
     display: flex;
     gap: 8px;
     padding: 10px;
     background: #e0e0e0;
 }
-.mac-buttons span{
+.mac-window-buttons span {
     width: 12px;
     height: 12px;
     border-radius: 50%;
     display: inline-block;
 }
-.close {background: #ff5f57;}
-.minimize {background: #ffbd2e;}
-.zoom {background: #28c940;}
+.cerrar {background: #ff5f57;}
+.minimizar {background: #ffbd2e;}
+.maximizar {background: #28c940;}
 /* Esto es el contenido del CV (seguramente haga mas cambios en el código) */
-.cv-contenido{
+.cv-contenido {
     padding: 20px;
     text-align: center;
 }
-h1 strong{
+h1 strong {
     color: #333;
+}
+/* Secciones del CV */
+.cv-seccion {
+    margin-bottom: 20px;
+}
+.cv-seccion h2 {
+    margin-bottom: 10px;
+}
+/* Lista de habilidades */
+ul {
+    list-style-type: disc;
+    text-align: center;
+    padding-left: 0;
+}
+li {
+    display: inline-block;
+    margin: 5px 10px;
+}
+/* Toggle container */
+.toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
 }
 /* Estilo mejorado para el modo oscuro */
 body.dark {
     background-color: #121212;
     color: white;
 }
-body.dark a body.dark h2 {
-    color: #61dafb; /* azul claro para darle más visibilidad (segunda prueba para ver si me gusta el modo oscuro con este color en la tipografía) */
+body.dark .mac-window {
+    background-color: #2d2d2d;
+    color: white;
+}
+body.dark .mac-window-buttons {
+    background-color: #333;
+}
+body.dark h1 strong, 
+body.dark h2 {
+    color: #61dafb; /* azul claro para darle más visibilidad (POSIBLEMENTE LO CAMBIE)*/
 }
 /* switch con el estilo IOS */
 .switch {
@@ -57,4 +89,37 @@ body.dark a body.dark h2 {
     display: inline-block;
     width: 40px;
     height: 20px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: .4s;
+}
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: .4s;
+}
+input:checked + .slider {
+    background-color: #4cd964;
+}
+input:checked + .slider::before {
+    transform: translateX(20px);
 }
